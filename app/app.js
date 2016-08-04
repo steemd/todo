@@ -131,7 +131,7 @@ var TodoItem = React.createClass({
         this.setState({edit: false});
     },
     render: function() {
-        var dane = this.props.item.status ? 'dane' : '',
+        var done = this.props.item.status ? 'done' : '',
             result;
         
         if (this.state.edit) {
@@ -165,7 +165,7 @@ var TodoItem = React.createClass({
             );
         }
         return (
-            <li className={dane + ' list-group-item'}>
+            <li className={done + ' list-group-item'}>
                 {result}
             </li>
         );
